@@ -1,0 +1,2282 @@
+<!--Exported Wed Sep 12 00:05:21 IST 2018 by admin from IN-C0QJH92-10--><exportedDataflow schema_version="9.0"><exposed>false</exposed><dataflow id="GEC_UK_DF_Main_1_StartMainProcess_v1" schema_version="9.0" version=""><product_group/><channels><channel id="c9157b86-a996-4265-9600-4ee4edab24df"><field_transformers/></channel><channel id="5b1aebbe-3d41-49c1-8d8c-c8b5126d618b"><field_transformers/></channel><channel id="2b560c2e-b859-46e6-b9f6-301839e8e450"><field_transformers/></channel><channel id="46f65bdc-72c0-4ebd-8aca-1b2be418a3ea"><field_transformers/></channel><channel id="f2d8a42f-5d46-44df-98c1-f8aa04fa1243"><field_transformers/></channel><channel id="b9ba958f-d9cf-4d98-bce3-69c5a57ba460"><field_transformers/></channel></channels><created_by>admin</created_by><created_date>9/12/18 12:01 AM</created_date><service_exposures/><icon/><inputs/><last_modified_by>admin</last_modified_by><last_modified_date>9/12/18 12:01 AM</last_modified_date><outputs/><properties><property><name>ViewData</name><value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<viewData version="3.0">
+  <canvasNode id="bf79fe86-a39a-41c0-8c62-550d102b047f">
+    <location x="-432.1328" y="190" />
+  </canvasNode>
+  <canvasNode id="4f7f555f-1416-4b60-bb2c-49244efd4615">
+    <location x="-137" y="78" />
+  </canvasNode>
+  <canvasNode id="a70b266c-7440-4190-a8ae-28b7a5970663">
+    <location x="-568" y="190" />
+  </canvasNode>
+  <canvasNode id="d4dfa2d8-8439-4733-9cb7-282cc0abb86e">
+    <location x="41" y="191" />
+  </canvasNode>
+  <canvasNode id="412586b3-0bc0-431c-a4ef-ec5ef5e06dd8">
+    <location x="38" y="76.43201" />
+  </canvasNode>
+  <canvasNode id="2c6f3d94-b5f1-4554-8ecb-c952e4b36f1c">
+    <location x="-706.5" y="200" />
+  </canvasNode>
+  <canvasNode id="91072173-d55f-4818-90c1-7ca359d07693">
+    <location x="-312.1328" y="80" />
+  </canvasNode>
+  <canvasLink fromPortID="ab10b556-1323-4d7f-9de1-8525594ea929" toPortID="43871325-1c40-4e68-a24a-b7506eb0301a" />
+  <canvasLink fromPortID="4da4d771-9c69-4382-873b-0c6cb9053c3e" toPortID="16c2ef13-8b59-47b1-ae87-5e562f8bd522" />
+  <canvasLink fromPortID="07077cb0-11c3-4213-8c11-e17aa172a805" toPortID="7e41b996-21ef-4271-90a5-2ded60bd5fbb" />
+  <canvasLink fromPortID="ec67f688-383e-494f-a579-748188ca2e86" toPortID="975f030a-0bd5-44ae-9774-edff994f3059" />
+  <canvasLink fromPortID="b0557e78-7793-49f4-817c-7a12d183392d" toPortID="f22e951d-fef0-499c-8ea3-e8680173ea96" />
+  <canvasLink fromPortID="d44b8529-f11c-418e-aebe-a2ac8874c501" toPortID="b8b0d0e2-7bed-4583-9a4c-b2b1f4285a69" />
+</viewData>]]></value></property></properties><stages><stage id="412586b3-0bc0-431c-a4ef-ec5ef5e06dd8"><stage_name>sink</stage_name><stage_version/><label>Write to File</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<SinkSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2.5">
+  <monitorProgress>false</monitorProgress>
+  <outputMode>1</outputMode>
+  <truncateTable>false</truncateTable>
+  <dropTable>false</dropTable>
+  <batchCommitThreshold>1</batchCommitThreshold>
+  <progressThreshold>0</progressThreshold>
+  <dataSourceMetadata>
+    <CSVMetadata>
+      <encoding>UTF-8</encoding>
+      <host />
+      <path>/tmp/Job2_input_2_20160501.txt</path>
+      <port>-1</port>
+      <protocol>esfile</protocol>
+      <delimiter>0001</delimiter>
+      <textQualifier />
+      <skipFirstRow>true</skipFirstRow>
+      <lineSeparator />
+      <strictlyEnforceColumnCount>true</strictlyEnforceColumnCount>
+      <fields>
+        <field>
+          <name>ACC_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>AddressLine1</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>AddressLine2</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>AddressLine3</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>AddressLine4</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>Country</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ProcessType</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>Type</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>uniqueRecordID</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_TYPE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>Country_Flag</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COVER_IND</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_BANK_CDE_FLAG</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_BANK_CDE_FLAG</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+      </fields>
+    </CSVMetadata>
+  </dataSourceMetadata>
+  <sortColumns />
+  <enableMultiFile>false</enableMultiFile>
+  <fieldMultiFile />
+</SinkSettings>]]></settings><input_ports><input_port id="f22e951d-fef0-499c-8ea3-e8680173ea96"><channel idref="b9ba958f-d9cf-4d98-bce3-69c5a57ba460"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports/><properties><property><name>ViewData</name><value><![CDATA[IsRemote=T]]></value></property><property><name>stageItemName</name><value><![CDATA[fileSink]]></value></property></properties></stage><stage id="2c6f3d94-b5f1-4554-8ecb-c952e4b36f1c"><stage_name>source</stage_name><stage_version/><label>Read from File</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<SourceSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2.5">
+  <firstRecordNumber>1</firstRecordNumber>
+  <maxRows>0</maxRows>
+  <dataSourceMetadata>
+    <CSVMetadata>
+      <encoding>UTF-8</encoding>
+      <host />
+      <path>/opt/spectrum_data/warehouse/UK/FCCM/GEC_OUT/LATEST/processDir/transactions_1_20160501/transactions_1_20160501.dat</path>
+      <port>-1</port>
+      <protocol>esfile</protocol>
+      <delimiter>0001</delimiter>
+      <textQualifier />
+      <skipFirstRow>false</skipFirstRow>
+      <lineSeparator />
+      <strictlyEnforceColumnCount>true</strictlyEnforceColumnCount>
+      <fields>
+        <field>
+          <name>GEO_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INSTC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>SRC_SYS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ENTY</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>GEO_REGION</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CLR_CHANL</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_INTRN_ID_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_OGNG_REFER_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>HO_PROC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ETE_REFER_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_PROC_DT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_VALUE_DT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>PYMT_SRCE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_STAT_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_SUBTP_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_CLASS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_ORIG_CLASS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COVER_IND</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CREDIT_TC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DEBIT_TC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>PYMT_METH_ORIG_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>PYMT_METH_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_PROC_PRD_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_SUB_PRD_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_USE_TYP_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_INSTR_ORIG_AMT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CRNCY_TRAN_ORIG_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CRNCY_TRAN_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_FINAL_AMT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DEBIT_AMT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CRNCY_DEBIT_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CREDIT_AMT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CRNCY_CREDIT_AMT_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BASE_AMT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OBI_REMIT_INFO</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBI_REMIT_INFO</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORIGSEND_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORIGREC_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>SEND_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>SEND_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>REC_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>REC_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>OGB_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BBK_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBT_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>COR_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>IBK_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INS_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB__BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCB_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>RCR_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>STP_PYMT_IND</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CHNG_IN_REPAIR</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_EXTN_ID</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_TYPE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_ORIG_SUBTP_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INR_ENTY_TRAN_IND</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>VLID_CREDR_IBAN_IND</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>MP_DR_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>MP_CR_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>BNF_ACCT_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORG_ACCT_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_ORG_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_ORG_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_ORG_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_ORG_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_ORG_ADDR</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_BNF_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_BNF_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_BNF_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_BNF_NAME</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ULTMT_BNF_ADDR</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>SRCE_SYS_EXPRT_DT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>SYS_IMPRT_DT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>EXCHG_RATE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ACCTG_ENTR_DEBIT_RATE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ACCTG_ENTR_CREDIT_RATE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>HO_BNK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CR_ACCT_TYPE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DR_ACCT_TYPE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_DIR_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INTRA_GROUP</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CRNCY_INSTR_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CRNCY_INSTR_ORIG_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_INSTR_AMT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_ORIG_INSTR_AMT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBTR_GHO_CLAS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CDTR_GHO_CLAS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBTR_CLIENT_IN_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CDTR_CLIENT_IN_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>DBTR_MARKET_SEC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CDTR_MARKET_SEC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_SENDR_ORIG_REFER_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>ORIG_PROC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>TRAN_PROC_ORIG_DT</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>WHOSE_ERROR</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>PROD_TYP</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>INSTMNT_TYP</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>PYMT_SRCE_CDE_DESC</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>CHQ_NUM</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+        <field>
+          <name>SRC_ID
+</name>
+          <required>false</required>
+          <type>string</type>
+          <pattern />
+        </field>
+      </fields>
+    </CSVMetadata>
+  </dataSourceMetadata>
+  <trimColumns />
+  <sortColumns />
+</SourceSettings>]]></settings><input_ports/><options/><output_ports><output_port id="ab10b556-1323-4d7f-9de1-8525594ea929"><channel idref="2b560c2e-b859-46e6-b9f6-301839e8e450"/><label>output_port</label><port_name>output_port</port_name></output_port><output_port id="12993e0f-e34a-44f3-ad93-5e72291cf048"><label>error_port</label><port_name>error_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value><![CDATA[IsRemote=T]]></value></property><property><name>stageItemName</name><value><![CDATA[fileSource]]></value></property></properties></stage><stage id="d4dfa2d8-8439-4733-9cb7-282cc0abb86e"><stage_name>sink</stage_name><stage_version/><label>Write to File 2</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<SinkSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2.5">
+  <monitorProgress>false</monitorProgress>
+  <outputMode>1</outputMode>
+  <truncateTable>false</truncateTable>
+  <dropTable>false</dropTable>
+  <batchCommitThreshold>1</batchCommitThreshold>
+  <progressThreshold>0</progressThreshold>
+  <dataSourceMetadata>
+    <CSVMetadata>
+      <encoding>UTF-8</encoding>
+      <host />
+      <path>/tmp/Job_6_input1_2_20160501.txt</path>
+      <port>-1</port>
+      <protocol>esfile</protocol>
+      <delimiter>0001</delimiter>
+      <textQualifier />
+      <skipFirstRow>true</skipFirstRow>
+      <lineSeparator />
+      <strictlyEnforceColumnCount>true</strictlyEnforceColumnCount>
+      <fields>
+        <field>
+          <name>ACCTG_ENTR_CREDIT_RATE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ACCTG_ENTR_DEBIT_RATE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BASE_AMT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBI_REMIT_INFO</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BBK_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_ACCT_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_EXTN_ID</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>BNF_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CDTR_CLIENT_IN_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CDTR_GHO_CLAS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CDTR_MARKET_SEC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CHNG_IN_REPAIR</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CHQ_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CLR_CHANL</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COR_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>COVER_IND</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CR_ACCT_TYPE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CREDIT_AMT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CREDIT_TC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CRNCY_CREDIT_AMT_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CRNCY_DEBIT_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CRNCY_INSTR_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CRNCY_INSTR_ORIG_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CRNCY_TRAN_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>CRNCY_TRAN_ORIG_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBT_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBTR_CLIENT_IN_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBTR_GHO_CLAS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DBTR_MARKET_SEC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DEBIT_AMT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DEBIT_TC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>DR_ACCT_TYPE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ENTY</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ETE_REFER_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>EXCHG_RATE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>GEO_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>GEO_REGION</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>HO_BNK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>HO_PROC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>IBK_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INR_ENTY_TRAN_IND</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INS_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INSTC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INSTMNT_TYP</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>INTRA_GROUP</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>MP_CR_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>MP_DR_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OBI_REMIT_INFO</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>OGB_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_ACCT_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_ACCT_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORG_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORIG_PROC_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORIGREC_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ORIGSEND_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>PROD_TYP</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>PYMT_METH_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>PYMT_METH_ORIG_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>PYMT_SRCE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>PYMT_SRCE_CDE_DESC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCB_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_1_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_2_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_3_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_ADDR_LINE_4_TEXT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>RCR_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>REC_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>REC_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>SEND_BANK_ID_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>SEND_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>SRC_ID</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>SRC_SYS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>SRCE_SYS_EXPRT_DT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>STP_PYMT_IND</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>SYS_IMPRT_DT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_CLASS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_DIR_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_FINAL_AMT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_INSTR_AMT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_INSTR_ORIG_AMT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_INTRN_ID_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_OGNG_REFER_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_ORIG_CLASS_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_ORIG_INSTR_AMT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_ORIG_SUBTP_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_PROC_DT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_PROC_ORIG_DT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_PROC_PRD_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_SENDR_ORIG_REFER_NUM</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_STAT_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_SUB_PRD_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_SUBTP_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_TYPE_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_USE_TYP_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>TRAN_VALUE_DT</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_BNF_ADDR</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_BNF_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_BNF_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_BNF_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_BNF_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_ORG_ADDR</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_ORG_BANK_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_ORG_BANK_CDE_DSC</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_ORG_CTRY_CDE</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>ULTMT_ORG_NAME</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>uniqueRecordID</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>VLID_CREDR_IBAN_IND</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>WHOSE_ERROR</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+      </fields>
+    </CSVMetadata>
+  </dataSourceMetadata>
+  <sortColumns />
+  <enableMultiFile>false</enableMultiFile>
+  <fieldMultiFile />
+</SinkSettings>]]></settings><input_ports><input_port id="b8b0d0e2-7bed-4583-9a4c-b2b1f4285a69"><channel idref="c9157b86-a996-4265-9600-4ee4edab24df"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports/><properties><property><name>ViewData</name><value><![CDATA[IsRemote=T]]></value></property><property><name>stageItemName</name><value><![CDATA[fileSink]]></value></property></properties></stage><stage id="91072173-d55f-4818-90c1-7ca359d07693"><stage_name>GEC_UK_SF_Main_1_StartMainProcess_v1</stage_name><stage_version/><label>GEC_UK_SF_Main_1_StartMainProcess_v1</label><num_instances>2</num_instances><distributed>true</distributed><batch_size>50000</batch_size><input_ports><input_port id="7e41b996-21ef-4271-90a5-2ded60bd5fbb"><channel idref="f2d8a42f-5d46-44df-98c1-f8aa04fa1243"/><label>Input</label><port_name>Input</port_name></input_port></input_ports><options/><output_ports><output_port id="ec67f688-383e-494f-a579-748188ca2e86"><channel idref="46f65bdc-72c0-4ebd-8aca-1b2be418a3ea"/><label>Output</label><port_name>Output</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[GEC_UK_SF_Main_1_StartMainProcess_v1]]></value></property></properties></stage><stage id="4f7f555f-1416-4b60-bb2c-49244efd4615"><stage_name>transformer</stage_name><stage_version/><label>Country_Flag initialization and Blank Record check flag string convertion</label><num_instances>8</num_instances><distributed>false</distributed><batch_size>0</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<TransformerSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.0">
+  <transformDefinitions>
+    <transformDefinition>
+      <name>Custom</name>
+      <script>
+//data.each { k,v -&gt; if (v != null &amp;&amp; !(v instanceof String)) v = v.toString()} #
+
+data.RecordBlankCheck =""+data.RecordBlankCheck;
+
+//data.each { k,v -&gt; if (v != null &amp;&amp; !(v instanceof String)) throw new RuntimeException("Field " + k + " is type " + v.getClass())} </script>
+      <transformParameters>
+        <transformParameter>
+          <name>transformName</name>
+          <type>string</type>
+          <value>Convert Blank Record check into string</value>
+        </transformParameter>
+      </transformParameters>
+      <transformFields />
+    </transformDefinition>
+    <transformDefinition>
+      <name>Custom</name>
+      <script>data['Country_Flag']  = options.get("Cntry_Flag");</script>
+      <transformParameters>
+        <transformParameter>
+          <name>outputColumn</name>
+          <type>string</type>
+          <value>Country_Flag</value>
+        </transformParameter>
+        <transformParameter>
+          <name>transformName</name>
+          <type>string</type>
+          <value>Country_Flag Initialization</value>
+        </transformParameter>
+      </transformParameters>
+      <transformFields>
+        <transformField>
+          <name>Country_Flag</name>
+          <type>string</type>
+          <fieldType xsi:type="SimpleFieldTypeInternal">
+            <name>string</name>
+          </fieldType>
+        </transformField>
+      </transformFields>
+    </transformDefinition>
+  </transformDefinitions>
+</TransformerSettings>]]></settings><input_ports><input_port id="975f030a-0bd5-44ae-9774-edff994f3059"><channel idref="46f65bdc-72c0-4ebd-8aca-1b2be418a3ea"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="b0557e78-7793-49f4-817c-7a12d183392d"><channel idref="b9ba958f-d9cf-4d98-bce3-69c5a57ba460"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[transformer]]></value></property></properties></stage><stage id="a70b266c-7440-4190-a8ae-28b7a5970663"><stage_name>UniqueIDGenerator</stage_name><stage_version/><label>Unique ID Generator</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16" standalone="yes"?><HashGenerationSettings xmlns="http://g1.com/cdq/schema/uniqueidgenerator-settings.xsd"><Rules><HashGenerationField value="uniqueRecordID" /><Rule><Algorithm value="SeqNum" /><Start value="1" /><Active value="Y" /></Rule></Rules></HashGenerationSettings>]]></settings><input_ports><input_port id="43871325-1c40-4e68-a24a-b7506eb0301a"><channel idref="2b560c2e-b859-46e6-b9f6-301839e8e450"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="4da4d771-9c69-4382-873b-0c6cb9053c3e"><channel idref="5b1aebbe-3d41-49c1-8d8c-c8b5126d618b"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[UniqueIDGenerator]]></value></property></properties></stage><stage id="bf79fe86-a39a-41c0-8c62-550d102b047f"><stage_name>multicaster</stage_name><stage_version/><label>Broadcaster</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><input_ports><input_port id="16c2ef13-8b59-47b1-ae87-5e562f8bd522"><channel idref="5b1aebbe-3d41-49c1-8d8c-c8b5126d618b"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="07077cb0-11c3-4213-8c11-e17aa172a805"><channel idref="f2d8a42f-5d46-44df-98c1-f8aa04fa1243"/><label>port</label><port_name/></output_port><output_port id="d44b8529-f11c-418e-aebe-a2ac8874c501"><channel idref="c9157b86-a996-4265-9600-4ee4edab24df"/><label>port 2</label><port_name/></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[multicaster]]></value></property></properties></stage></stages><reports/><notifications/><dataflow_options><dataflow_option><option><name>Cntry_Flag</name><type/><label>Cntry_Flag</label><label_id/><description/><description_id/><default_value>HKC</default_value><min_value/><max_value/><legal_values/></option><targets><group_target><type>transforms</type></group_target></targets></dataflow_option></dataflow_options><type>2</type><vendor/></dataflow></exportedDataflow>
