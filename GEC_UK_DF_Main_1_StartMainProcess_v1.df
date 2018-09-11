@@ -32,6 +32,7 @@
   <monitorProgress>false</monitorProgress>
   <outputMode>1</outputMode>
   <truncateTable>false</truncateTable>
+  <truncateTable>true</truncateTable>
   <dropTable>false</dropTable>
   <batchCommitThreshold>1</batchCommitThreshold>
   <progressThreshold>0</progressThreshold>
@@ -48,6 +49,13 @@
       <lineSeparator />
       <strictlyEnforceColumnCount>true</strictlyEnforceColumnCount>
       <fields>
+	        <delimiter>0001</delimiter>
+      <textQualifier />
+      <skipFirstRow>true</skipFirstRow>
+      <lineSeparator />
+      <strictlyEnforceColumnCount>true</strictlyEnforceColumnCount>
+      <fields>
+
         <field>
           <name>ACC_NUM</name>
           <required>false</required>
